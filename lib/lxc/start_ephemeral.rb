@@ -12,20 +12,12 @@ module LXC
       Dir.mkdir(dest_path, 0770)
 
       dest.load_config(orig.config_file_name)
-
       dest.set_config_item("lxc.utsname", dest.name)
       dest.set_config_item("lxc.rootfs", File.join(dest_path, "rootfs"))
 
-      dest.config_item("lxc.network").each_with_index do |network_type, index|
-        dest.set_config_item("lxc.network.#{index}.hwaddr", random_mac) if dest.config_item("lxc.network.#{index}.hwaddr")
-      end
-
       create_pre_mount(orig, dest, opts)
-
       create_post_stop(orig, dest, opts)
-
       dest.save_config
-
       dest.start(daemonize: opts[:daemonize])
 
       unless dest.wait(:running, 5)
