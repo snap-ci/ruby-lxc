@@ -1,11 +1,10 @@
 # Ruby-LXC
 
-[![Build Status](https://travis-ci.org/lxc/ruby-lxc.svg?branch=master)](https://travis-ci.org/lxc/ruby-lxc)
+[![Build Status](https://snap-ci.com/snap-ci/ruby-lxc/branch/master/build_image)](https://snap-ci.com/snap-ci/ruby-lxc/branch/master)
 
 ## Introduction
 
-Ruby-LXC is a Ruby binding for liblxc. It allows the creation and management
-of Linux Containers from Ruby scripts.
+Ruby-LXC is a Ruby binding for liblxc. It allows the creation and management of Linux Containers from Ruby scripts. To report an issue, [please contact the Snap.ci support team](https://snap-ci.com/contact-us)
 
 ## Build and installation
 
